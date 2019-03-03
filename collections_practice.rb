@@ -26,7 +26,8 @@ def contain_a(array)
     container << element if element.include?("a")
   end
   container
-enddef remove_non_strings(array)
+end
+def remove_non_strings(array)
   container = []
   array.each do |element|
     container << element if element.is_a?(String)
