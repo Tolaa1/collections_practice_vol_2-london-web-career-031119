@@ -76,7 +76,6 @@ def merge_data(keys, values)
         merged_person[:first_name] = name
         container << merged_person
       end
-    end
   end
   container
 end
