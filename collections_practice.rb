@@ -26,5 +26,30 @@ def contain_a(array)
     container << element if element.include?("a")
   end
   container
+enddef remove_non_strings(array)
+  container = []
+  array.each do |element|
+    container << element if element.is_a?(String)
+  end
+  container
+end
+
+def first_wa(array)
+  first_wa = nil
+  array.each do |element|
+    if element.match(/wa/)
+      first_wa = element 
+      break
+    end
+  end
+  first_wa
+end
+
+def find_cool(array)
+  container = []
+  array.each do |element|
+    container << element if element[:temperature] == "cool" 
+  end
+  container
 end
 
