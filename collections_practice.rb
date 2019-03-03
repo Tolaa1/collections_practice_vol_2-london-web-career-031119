@@ -53,4 +53,29 @@ def find_cool(array)
   end
   container
 end
+def count_elements(array)
+  results = Hash.new(0)
+  array.each do |element|
+    results[element] += 1
+  end
+  container = []
+  results.each do |key, value|
+    key[:count] = value
+    container << key
+  end
+  container
+end
 
+def merge_data(keys, values)
+  container = []
+  keys.each do |person_name|
+    name = person_name[:first_name]
+    values.each do |person_data|
+      if person_data[name]
+        merged_person = person_data[name]
+        merged_person[:first_name] = name
+        container << merged_person
+      end
+    end
+  end
+  container
