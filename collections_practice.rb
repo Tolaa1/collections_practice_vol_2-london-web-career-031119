@@ -10,12 +10,6 @@ def organize_schools(schools)
     end
   end
   organized_schools
-enddef begins_with_r(array)
-  flag = true
-  array.each do |element|
-    flag = false if element[0] != "r"
-  end
-  flag
 end
 
 def begins_with_r(array)
